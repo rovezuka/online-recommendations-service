@@ -1,4 +1,6 @@
 class ConsultationRequestsController < ApplicationController
+        skip_before_action :verify_authenticity_token, only: [:create]
+
         # Действие для создания нового запроса на консультацию
         def create
           consultation_request = ConsultationRequest.new(consultation_request_params)
@@ -15,4 +17,3 @@ class ConsultationRequestsController < ApplicationController
           params.require(:consultation_request).permit(:text, :created_at, :patient_id)
         end
 end
-      
