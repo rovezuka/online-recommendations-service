@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   # Маршруты для анализа медицинских данных
   post '/consultation_requests', to: 'consultation_requests#create' # Создание запроса на консультацию
-  post '/consultation_requests/:request_id/recommendations', to: 'medical_data#create_recommendation' # Создание рекомендации для конкретного запроса на консультацию
+  post '/consultation_requests/:request_id/recommendations', to: 'recommendations#create', as: 'create_recommendation'
   get '/patients/:patient_id/recommendations', to: 'medical_data#patient_recommendations' # Получение списка рекомендаций для конкретного пациента
 end

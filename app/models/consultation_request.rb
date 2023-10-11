@@ -7,5 +7,5 @@ class ConsultationRequest < ApplicationRecord
   belongs_to :patient
 
   # Связь с рекомендацией
-  has_one :recommendation, dependent: :destroy
+  has_many :recommendations, dependent: :destroy
 end
