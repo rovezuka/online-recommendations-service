@@ -96,8 +96,6 @@ Patient.create(full_name: 'Иван Иванов', date_of_birth: '1990-01-01', 
 
 #### POST /consultation_requests - создание запроса на консультацию
 
-Запрос:
-
 Тип запроса: POST
 URL: http://localhost:3000/consultation_requests 
 
@@ -113,8 +111,6 @@ Body (raw JSON):
 
 #### POST /consultation_requests/:request_id/recommendations - создание рекомендации для конкретного запроса на консультацию
 
-Запрос:
-
 Тип запроса: POST
 
 URL: http://localhost:3000/consultation_requests/1/recommendations (где 1 - ID запроса на консультацию, который вы хотите обновить)
@@ -122,7 +118,6 @@ URL: http://localhost:3000/consultation_requests/1/recommendations (где 1 - I
 Content-Type: application/json
 
 #### GET /patients/:patient_id/recommendations - получение списка рекомендаций для конкретного пациента
-Запрос:
 
 Тип запроса: GET
 
